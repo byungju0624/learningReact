@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Learning React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 1. 리액트 이해
+>
+> - 리액트는 자바스크립트 라이브러리로 사용자 인터페이스를 만드는 데 사용, 오직 V(view)만 신경쓰는 라이브러리.
+> - 컴포넌트(Component): 리액트 프로젝트에서 특정 부분이 어떻게 생길지 정하는 선언체.
+> - 렌더링(rendering): 사용자 화면에 뷰를 보여주는 것.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+> 2. 리액트의 특징
+>
+> - DOM(Document Object Model): 객체를 문서 구조로 표현하는 방법으로 XML이나 HTML로 작성한다. 트리 형태라서 특정 노드를 찾거나 수정하거나 제거하거나 원하는 곳에 삽입할 수 있다.
+>   - DOM의 약점: 동적 UI에 최적화되어 있지 않다는 것. HTML은 자체적으로 정적이다. DOM자체는 빠르나, 웹 브라우저 단에서 DOM에 변화가 일어나면 웹 브라우저가 CSS를 다시 연산하고, 레이아웃을 구성하고, 페이지를 리페인트하는 데,
+>     이 과정에서 시간이 허비된다.
+>   - 해결법: 리액트는 Virtual DOM 방식을 사용하여 DOM 업데이트를 추상화함으로써 DOM 처리 횟수를 최소화하고 효율적으로 진행한다.
+>   - Virtual DOM: 실제 DOM에 접근하여 조작하는 대신, 이를 추상화한 자바스크립트 객체를 구성하여 사용한다.
+>     - 업데이트 시 거치는 세가지 절차
+>       - 1. 데이터를 업데이트하면 전체 UI를 Virtual DOM에 리렌더링한다.
+>       - 2. 이전 Virtual DOM에 있던 내용과 현재 내용을 비교한다.
+>       - 3. 바뀐 부분만 실제 DOM에 적용한다.
+>   - 리액트와 Virtual DOM이 언제나 제공하는 것은 **업데이트 처리 간결성** 이다.
+>     UI를 업데이트하는 과정에서 생기는 복잡함을 모두 해소하고, 더욱 쉽게 업데이트에 접근할 수 있다.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> 3. 기타 특징
+>
+> - 리액트는 정말 뷰만 신경쓰는 라이브러리로 기타 기능은 직접 구현하여 사용해야 한다.
+>   - 라우팅: 리액트 라우터(react-router)
+>   - Ajax 처리: axios, fetch
+>   - 상태관리: Redux, MobX
