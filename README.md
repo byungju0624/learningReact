@@ -43,7 +43,7 @@
 > 1. JSX 문법
 >    - 컴포넌트에 여러 요소가 있을 경우 부모 요소 하나로 감싸야 한다.
 
-        ```javascript
+```javascript
         function App {
             return (
                 <>
@@ -52,21 +52,21 @@
                 </>
             )
         }
-        ```
+```
 
 > - 감싸주는 이유: Virtual DOM에서 컴포넌트 변화를 감지해 낼 때 효율적으로 비교할 수 있도록 컴포넌트 내부는 하나의 DOM 트리 구조로 이루어져야 한다는 규칙이 있기 때문
 > - 자바스크립트 표현: 자바스크립트 표현식을 JSX 내부에서 코드를 {}감싸서 사용 가능하다.
 
-        ```javascript
-        function App(){
-            const name = 'julius'
-            return (
-                <>
-                <div>hello, {name}</div>
-                </>
-            )
-        }
-        ```
+```javascript
+function App() {
+  const name = "julius";
+  return (
+    <>
+      <div>hello, {name}</div>
+    </>
+  );
+}
+```
 
 > - **var**
 >   - scope가 함수 단위.
